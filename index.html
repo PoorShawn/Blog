@@ -8,6 +8,9 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        text-decoration: none;
+        list-style-type: none;
+        color: inherit;
       }
 
       body {
@@ -18,8 +21,23 @@
 
       header {
         display: flex;
-        justify-content: center;
-        margin: 10px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: antiquewhite;
+      }
+
+      header h1 {
+        margin-left: 20px;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .nav a {
+        margin-right: 30px;
       }
       
       .main {
@@ -53,6 +71,12 @@
   <body>
     <header>
       <h1>Welcome to My Blog!</h1>
+      <div class="nav">
+        <a href="#">首页</a>
+        <a href="#">技术文章</a>
+        <a href="#">闲言碎语</a>
+        <a href="#">简要经历</a>
+      </div>
     </header>
     <div class="main">
       <article>
@@ -74,6 +98,7 @@
           <br />
           最后，我想，保持思考，保持学习，保持进步，保持对生活的热爱，保持对未来的期待，保持对过去的反思，保持对现在的珍惜，这便是我的生活态度。
         </div>
+        
       </article>
     </div>
     <footer>

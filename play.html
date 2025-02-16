@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 在Codepen创建你的「CSS犯罪现场」 */
+    .box {
+    width: 100px;
+    height: 100px;
+    background: 
+      linear-gradient(45deg, #ff6b6b 25%, transparent 25%) -50px 0,
+      linear-gradient(-45deg, #4ecdc4 25%, transparent 25%) -50px 0,
+      linear-gradient(45deg, transparent 75%, #ff6b6b 75%) -50px 0,
+      linear-gradient(-45deg, transparent 75%, #4ecdc4 75%) -50px 0;
+    background-size: 100px 100px;
+    transition: 0.5s;
+  }
+
+  .box:hover {
+    transform: rotate(360deg) scale(1.5);
+    background-position: 0 0;
+  }
+
+  :root { --x: 50%; --c: red; }
+  
+  body::after {
+    content: "YOU ARE AWESOME";
+    position: fixed;
+    left: var(--x);
+    top: 50%;
+    color: var(--c);
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <p>你好</p>
+  <script>
+    // 在浏览器控制台运行这段代码
+    document.designMode = "on";
+    setInterval(() => {
+      document.body.style.setProperty('--x', Math.random() * 100 + '%');
+      document.body.style.setProperty('--c', `hsl(${Math.random()*360}, 70%, 50%)`);
+    }, 100);
+  </script>
+</body>
+</html>
