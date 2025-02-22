@@ -21,7 +21,7 @@
 
       .page {
         height: 100vh;
-        width: 810px;
+        /* width: 810px; */
         padding: 0px 30px 20px 30px;
         display: flex;
         flex-direction: column;
@@ -67,6 +67,32 @@
       align-items: flex-start;
      }
 
+     section.post img {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+     }
+
+     section.post .post-container {
+      display: flex;
+      gap: 24px;
+     }
+
+     section.post .post-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+     }
+
+     section.post .content {
+      color: black;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+     }
+
      p.tag {
       font-size: 14px;
      }
@@ -76,6 +102,7 @@
       font-weight: 600;
       margin-top: 12px;
       margin-bottom: 12px;
+      padding-bottom: 12px;
      }
 
      p.summary {
@@ -129,15 +156,20 @@
       </header>
       <div class="main">
         <section class="post">
-          <p class="tag">回忆专栏</p>
-          <a href="http://127.0.0.1:5500/articles/article001.html#" class="content">
-            <p class="title">
-              警惕：莫让行为勤奋掩盖思维懒惰，从高中备考到生活的自我反思
-            </p>
-            <p class="summary">
-              对于自己所犯下的错误有更多的包容心，对于自己的生活和言行有更多有意识的反思。
-            </p>
-          </a>
+          <div class="post-container">
+            <img data-src="/pics/dear.jpg" class="lazyload" alt="a pic of dear">
+            <div class="post-title">
+              <p class="tag">回忆专栏</p>
+              <a href="http://127.0.0.1:5500/articles/article001.html#" class="content">
+                <p class="title">
+                  警惕：莫让行为勤奋掩盖思维懒惰，从高中备考到生活的自我反思
+                </p>
+                <p class="summary">
+                  对于自己所犯下的错误有更多的包容心，对于自己的生活和言行有更多有意识的反思。
+                </p>
+              </a>
+            </div>
+          </div>
           <div class="icon-tips">
             <div class="time">
               <svg t="1739703386935" class="time-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4321" width="200" height="200"><path d="M511.913993 63.989249c-247.012263 0-447.924744 200.912481-447.924744 447.924744s200.912481 447.924744 447.924744 447.924744 447.924744-200.912481 447.924744-447.924744S758.926256 63.989249 511.913993 63.989249zM511.913993 895.677474c-211.577356 0-383.763481-172.186125-383.763481-383.763481 0-211.577356 172.014111-383.763481 383.763481-383.763481s383.763481 172.014111 383.763481 383.763481S723.491349 895.677474 511.913993 895.677474z" fill="#707070" p-id="4322"></path><path d="M672.05913 511.913993l-159.973123 0L512.086007 288.123635c0-17.717453-14.277171-32.166639-31.994625-32.166639-17.717453 0-31.994625 14.449185-31.994625 32.166639l0 255.956996c0 17.717453 14.277171 31.994625 31.994625 31.994625l191.967747 0c17.717453 0 32.166639-14.277171 32.166639-31.994625C704.053754 526.191164 689.604569 511.913993 672.05913 511.913993z" fill="#707070" p-id="4323"></path></svg>
@@ -185,15 +217,20 @@
           </div>
         </section>
         <section class="post">
-          <p class="tag">回忆专栏</p>
-          <a href="#" class="content">
-            <p class="title">
-              警惕：莫让行为勤奋掩盖思维懒惰，从高中备考到生活的自我反思
-            </p>
-            <p class="summary">
-              对于自己所犯下的错误有更多的包容心，对于自己的生活和言行有更多有意识的反思。
-            </p>
-          </a>
+          <div class="post-container">
+            <img src="/pics/dear.jpg" alt="a pic of dear" />
+            <div class="post-title">
+              <p class="tag">回忆专栏</p>
+              <a href="http://127.0.0.1:5500/articles/article001.html#" class="content">
+                <p class="title">
+                  警惕：莫让行为勤奋掩盖思维懒惰，从高中备考到生活的自我反思
+                </p>
+                <p class="summary">
+                  对于自己所犯下的错误有更多的包容心，对于自己的生活和言行有更多有意识的反思。
+                </p>
+              </a>
+            </div>
+          </div>
           <div class="icon-tips">
             <div class="time">
               <svg t="1739703386935" class="time-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4321" width="200" height="200"><path d="M511.913993 63.989249c-247.012263 0-447.924744 200.912481-447.924744 447.924744s200.912481 447.924744 447.924744 447.924744 447.924744-200.912481 447.924744-447.924744S758.926256 63.989249 511.913993 63.989249zM511.913993 895.677474c-211.577356 0-383.763481-172.186125-383.763481-383.763481 0-211.577356 172.014111-383.763481 383.763481-383.763481s383.763481 172.014111 383.763481 383.763481S723.491349 895.677474 511.913993 895.677474z" fill="#707070" p-id="4322"></path><path d="M672.05913 511.913993l-159.973123 0L512.086007 288.123635c0-17.717453-14.277171-32.166639-31.994625-32.166639-17.717453 0-31.994625 14.449185-31.994625 32.166639l0 255.956996c0 17.717453 14.277171 31.994625 31.994625 31.994625l191.967747 0c17.717453 0 32.166639-14.277171 32.166639-31.994625C704.053754 526.191164 689.604569 511.913993 672.05913 511.913993z" fill="#707070" p-id="4323"></path></svg>
@@ -245,5 +282,21 @@
         <p>&copy;PoorShawn 2025</p>
       </footer>
     </div>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            observer.unobserve(img);
+          }
+        })
+      }, { threshold: 0.1 })
+
+      document.querySelectorAll(".lazyload")
+        .forEach(img=> {
+          observer.observe(img);
+        } );
+    </script>
   </body>
 </html>
